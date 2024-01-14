@@ -39,9 +39,20 @@ console.log(total);*/
 // ЗАДАЧА 5
 // НАПИШІТЬ ПРОГРАМУ, ЯКА ДОЗВОЛЯТИМЕ ЮЗЕРУ ВВОДИТИ ЧИСЛО І ВИЗНАЧАТИМЕ ЧИ ЦЕ ПАРНЕ ЧИСЛО, ЧИ НЕ ПАРНЕ.
 
-const user = Number(prompt("Введіть число"));
-if (user % 2 === 0) {
-  alert("Парне");
+// const user = Number(prompt("Введіть число"));
+// if (user % 2 === 0) {
+//   alert("Парне");
+// } else {
+//   alert("Не парне");
+// }
+
+// ЗАДАЧА 10
+// НАПИШІТЬ ПРОГРАМУ, ЯКА БУДЕ ВИЗНАЧАТИ ДОВЖИНУ ІМЕНІ , ЯКЩО ІМЯ БІЛЬШЕ 7 СИМВОЛІВ, КОНСОЛЬ ВИВОДИТЬ "Wow, you  have a REALLY long name!" , ЯКЩО МЕНШЕ 7
+// "Your name isn't very long"
+
+const userName = prompt("Введіть своє імя");
+if (userName.length > 7) {
+  alert("Wow, you  have a REALLY long name!");
 } else {
-  alert("Не парне");
+  alert("Your name isn't very long");
 }
