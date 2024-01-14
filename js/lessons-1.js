@@ -9,8 +9,16 @@ console.log(total);*/
 
 /*ЗАДАЧА 2
 ЗАПИТАТИ У КОРИСТУВАЧА ІМЯ, ПОЧТУ , ТЕЛЕФОН, І ПОКАЗАТИ У КОНСОЛІ "КОРИСТУВАЧ __ ВИКОРИСТОВУЄ  __ ПОЧТУ І __ ТЕЛЕФОН"*/
-const name = prompt("введіть ім'я");
-const email = prompt("ваша пошта");
-const phone = prompt("ваш телефон");
-const message = `КОРИСТУВАЧ ${name} ВИКОРИСТОВУЄ  ${email} ПОЧТУ І ${phone} ТЕЛЕФОН`
-alert(message);
+// const name = prompt("введіть ім'я");
+// const email = prompt("ваша пошта");
+// const phone = prompt("ваш телефон");
+// const message = `КОРИСТУВАЧ ${name} ВИКОРИСТОВУЄ  ${email} ПОЧТУ І ${phone} ТЕЛЕФОН`
+// alert(message);
+
+// ЗАДАЧА 3
+// ПОТРІБНО ЗАПИТАТИ У МАГАЗИНІ ЦІНУ ЗА КОЖЕН ОКРЕМИЙ ТОВАР,ТА ВИВЕСТИ ПОВІДОМЛЕННЯМ   ЗАГАЛЬНУ ЦІНУ ТОВАРУ
+const price1 = Number(prompt("Введіть ціну комп'ютера"));
+const price2 = Number(prompt("Введіть ціну телевізора"));
+const price3 = +prompt("Введіть ціну телефона");
+
+alert(`Загальна ціна товарів: ${price1+price2+price3}`);
