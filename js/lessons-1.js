@@ -102,7 +102,7 @@ console.log(total);*/
 
 // const userSubscription = prompt(
 //   "ПЕРІОД ПІДПИСКИ НА СЕРВІС(ДЕНЬ, НЕДІЛЯ, МІСЯЦЬ, РІК):"
-// );
+// ).toUpperCase();
 
 // // Розв'язок Максима Ярошенка
 
