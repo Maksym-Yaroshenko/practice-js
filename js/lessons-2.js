@@ -132,3 +132,5 @@
 // // removeCourse("Vue"); // 'Курс з таким іменем не найдено'
 // // updateCourse("Express", "NestJS"); // ['HTML', 'CSS', 'JavaScript', 'PostgreSQL', 'NestJS']
 // console.log(courses);
+
+console.log("ddd");
