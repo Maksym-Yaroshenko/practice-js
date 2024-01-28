@@ -47,15 +47,27 @@
 // 1) напишіть циклом for
 // const numbers = [2, 17, 94, 1, 23, 37];
 // 2) перепишіть функцією findSmallestNumber(numbers)
-console.log(findSmallestNumber([2, 17, 94, 1, 23, 37]));
-console.log(findSmallestNumber([49, 4, 83, 7, 12]));
+// console.log(findSmallestNumber([2, 17, 94, 1, 23, 37]));
+// console.log(findSmallestNumber([49, 4, 83, 7, 12]));
 
-function findSmallestNumber(numbers) {
-  let total = numbers[0];
-  for (let number of numbers) {
-    if (number < total) {
-      total = number;
-    }
-  }
-  return total;
-}
+// function findSmallestNumber(numbers) {
+//   let total = numbers[0];
+//   for (let number of numbers) {
+//     if (number < total) {
+//       total = number;
+//     }
+//   }
+//   return total;
+// }
+
+
+// ЗАДАЧА 4
+//  Провірте , чи являється рядок полідромом
+const str = "ротатор";//true
+const newString = "Hello";//false
+
+const newStr = str.split("").reverse().join("");
+console.log(newStr === str);
+
+const newIng = newString.split("").reverse().join("");
+console.log(newIng === newString);
