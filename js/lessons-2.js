@@ -106,17 +106,30 @@
 
 // ЗАДАЧА 7
 // Виконайте рефакторинг замінивши обявлення ф-ції з function declaration на function expression та на стрілочну функцію
-// // function checkNumbers(a, b) {
-// //   if (a > b) {
-// //     return `число ${a} більше ${b}`;
-// //   }
 
-// //   return `число ${b} більше ${a}`;
-// // }
+// // Розв'язок Максима Ярошенка
+
+// const checkNumbers = (a, b) => {
+//   if (a > b) {
+//     return `число ${a} більше ${b}`;
+//   }
+
+//   return `число ${b} більше ${a}`;
+// };
 
 // ЗАДАЧА 8
 // Напишіть ф-цію capitalize , яка буде приймати рядок і буде повертати новий рядок , де кожне слово буде з великої букви
-// // capitalize('the quick brown fox')// 'The Quick Brown Fox '
+// function capitalize(str) {
+//   const updateStr = str.split(" ");
+//   updateStr.map((element, index, array) => {
+//     // console.log(element[0].toUpperCase());
+//     array = element[0].toUpperCase();
+//     return array;
+//   });
+//   return updateStr;
+//   //   console.log(array);
+// }
+console.log(capitalize("the quick brown fox")); // 'The Quick Brown Fox '
 
 // ЗАДАЧА 9
 // Напишіть функцію для роботи з колекцією навчаючих курсів courses:
@@ -132,5 +145,3 @@
 // // removeCourse("Vue"); // 'Курс з таким іменем не найдено'
 // // updateCourse("Express", "NestJS"); // ['HTML', 'CSS', 'JavaScript', 'PostgreSQL', 'NestJS']
 // console.log(courses);
-
-console.log("ddd");
