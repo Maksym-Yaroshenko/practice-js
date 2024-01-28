@@ -31,13 +31,31 @@
 // ['Mango', 'Poly', 'Ajax']
 // з індексом 0 буде виведено 1 - Mango, а для индекса 2 выведет 3 - Ajax.
 
-const users = ["Mango", "Poly", "Ajax"];
-function logItems(array) {
-  let usersElements = "";
-  for (let i = 0; i < array.length; i += 1) {
-    usersElements += `${i} - ${users[i]}`;
+// const users = ["Mango", "Poly", "Ajax"];
+// function logItems(array) {
+//   let usersElements = "";
+//   for (let i = 0; i < array.length; i += 1) {
+//     usersElements += `${i} - ${users[i]}`;
+//   }
+//   return usersElements;
+// }
+// const result = logItems(users);
+// console.log(result);
+
+// ЗАДАЧА 3
+// Напишіть код , який шукає саме найменше число в масиві
+// 1) напишіть циклом for
+// const numbers = [2, 17, 94, 1, 23, 37];
+// 2) перепишіть функцією findSmallestNumber(numbers)
+console.log(findSmallestNumber([2, 17, 94, 1, 23, 37]));
+console.log(findSmallestNumber([49, 4, 83, 7, 12]));
+
+function findSmallestNumber(numbers) {
+  let total = numbers[0];
+  for (let number of numbers) {
+    if (number < total) {
+      total = number;
+    }
   }
-  return usersElements;
+  return total;
 }
-const result = logItems(users);
-console.log(result);
