@@ -37,28 +37,57 @@
 // addItem(item) - отримує новий товар та додає його до поточних.
 // removeItem(item) - отримає товар і, якщо він є, видаляє його з поточних.
 
-class Storage {
-  constructor(items) {
-    this.items = items;
-  }
-  getItems() {
-    return this.items;
-  }
-  addItem(item) {
-    this.items.push(item);
-  }
-  removeItem(item) {
-    const result = this.items.indexOf(item);
-    if (result === -1) {
-      return;
-    } else {
-      this.items.splice(result, 1);
-    }
-  }
+// class Storage {
+//   constructor(items) {
+//     this.items = items;
+//   }
+//   getItems() {
+//     return this.items;
+//   }
+//   addItem(item) {
+//     this.items.push(item);
+//   }
+//   removeItem(item) {
+//     const result = this.items.indexOf(item);
+//     if (result === -1) {
+//       return;
+//     } else {
+//       this.items.splice(result, 1);
+//     }
+//   }
+// }
+
+// const items = new Storage(["Виноград", "Банани", "Кокоси", "Ківі"]);
+// items.addItem("Манго");
+// items.removeItem("Ківі");
+
+// console.log(items);
+
+
+
+// ЗАДАЧА 1 
+// Створіть карточки товару з масиву використовуючи createElement
+
+// js/
+
+import car from "./date/car.js"
+ 
+const product = document.querySelector(".js-goods");
+function productCar({ name, img, price, description }) {
+  const productElement = document.createElement("li");
+  const productTitle = document.createElement("h2");
+  productTitle.textContent = name;
+  const productImage = document.createElement("img");
+  productImage.src = img;
+  productImage.alt = name;
+  productImage.width = 300;
+  const productPrice = document.createElement("p");
+  productPrice.textContent = price;
+  const productDescription = document.createElement("p");
+  productDescription.textContent = description;
+  productElement.append(productTitle, productImage, productPrice, productDescription);
+  return productElement;
 }
-
-const items = new Storage(["Виноград", "Банани", "Кокоси", "Ківі"]);
-items.addItem("Манго");
-items.removeItem("Ківі");
-
-console.log(items);
+const elements = car.map(productCar);
+console.log(elements)
+product.append(...elements);
