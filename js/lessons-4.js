@@ -63,31 +63,176 @@
 
 // console.log(items);
 
-
-
-// ЗАДАЧА 1 
+// ЗАДАЧА 1
 // Створіть карточки товару з масиву використовуючи createElement
 
 // js/
 
-import car from "./date/car.js"
- 
-const product = document.querySelector(".js-goods");
-function productCar({ name, img, price, description }) {
-  const productElement = document.createElement("li");
-  const productTitle = document.createElement("h2");
-  productTitle.textContent = name;
-  const productImage = document.createElement("img");
-  productImage.src = img;
-  productImage.alt = name;
-  productImage.width = 300;
-  const productPrice = document.createElement("p");
-  productPrice.textContent = price;
-  const productDescription = document.createElement("p");
-  productDescription.textContent = description;
-  productElement.append(productTitle, productImage, productPrice, productDescription);
-  return productElement;
-}
-const elements = car.map(productCar);
-console.log(elements)
-product.append(...elements);
+// import car from "./date/car.js"
+
+// const product = document.querySelector(".js-goods");
+// function productCar({ name, img, price, description }) {
+//   const productElement = document.createElement("li");
+//   const productTitle = document.createElement("h2");
+//   productTitle.textContent = name;
+//   const productImage = document.createElement("img");
+//   productImage.src = img;
+//   productImage.alt = name;
+//   productImage.width = 300;
+//   const productPrice = document.createElement("p");
+//   productPrice.textContent = price;
+//   const productDescription = document.createElement("p");
+//   productDescription.textContent = description;
+//   productElement.append(productTitle, productImage, productPrice, productDescription);
+//   return productElement;
+// }
+// const elements = car.map(productCar);
+// console.log(elements)
+// product.append(...elements);
+
+// ЗАДАЧА 2
+// 2.1НАПИШІТЬ КАЛЬКУЛЯТОР, ЯКИЙ БУДЕ РАХУВАТИ ЦІНУ ШАШЛИКА, В ЗАЛЕЖНОСТІ ВІД ЦІНИ ЗА КІЛОГРАМ І КІЛЬКОСТІ КУПЛЕНОГО ПРОДУКТА , І БУДЕ ВИВОДИТИ РЕЗУЛЬТАТ НА ЕКРАН
+// html/
+
+// <div class="container">
+//     <h2 class="title">Скільки коштує мясо на шашлик :) ?</h2>
+//     <form class="form">
+//         <label for="price">Ціна грн</label>
+//         <input type="text" id="price" name="price" value="50">
+//         <label for="quantity">Кількість<span class="amount">1</span>кг </label>
+//         <input type="range" id="quantity" name="quantity" value="1" min="1" , max="20">
+//     </form>
+//     <p class="text-right total"></p>//ТУТ ФІНАЛЬНА ЦІНА ТОВАРУ
+// </div>
+
+// const form = document.querySelector(".form");
+// const inputPrice = document.querySelector("#price");
+// const amount = document.querySelector(".amount");
+// const quantity = document.querySelector("#quantity");
+// const textRight = document.querySelector(".text-right");
+
+// function calculator(event) {
+//   const price = inputPrice.value;
+//   const amountOfMeat = quantity.value;
+//   // console.log(price);
+//   // console.log(amountOfMeat);
+//   const total = price * amountOfMeat;
+//   textRight.textContent = total;
+//   event.preventDefault();
+// }
+
+// function quantityTotal() {
+//   const amountOfMeat = quantity.value;
+//   amount.textContent = amountOfMeat;
+// }
+
+// // calculator();
+
+// form.addEventListener("submit", calculator);
+// form.addEventListener("input", quantityTotal);
+
+// // 2.2 ПЕРЕПИШІТЬ КОД , ЩОБ ЗНАЧЕННЯ МИ ОТРИМУВАЛИ ПО КЛІЦІ НА КНОПКУ ,
+// //  ПРИ НАЖАТТІ ЯКОГО БУДЕ ВАМ РАХУВАТИ ТА ВИВОДИТИ РЕЗУЛЬТАТ НА ЕКРАН
+
+// // 2.3 НАПИШІТЬ  РАНДОМНИЙ КОЛІР ДЛЯ НАШОЇ ФОРМИ КОЛЬКУЛЯТОРА ЗА ДОПОМОГОЮ ІНЛАЙНОВОГО СТИЛЮ
+
+// const container = document.querySelector(".container");
+
+// const randomRgbColor = () => {
+//   const r = Math.round(Math.random() * (255 - 1) + 1);
+//   const g = Math.round(Math.random() * (255 - 1) + 1);
+//   const b = Math.round(Math.random() * (255 - 1) + 1);
+//   return `rgb(${r},${g},${b})`;
+// };
+
+// const color = randomRgbColor();
+// container.style.backgroundColor = color;
+
+// ЗАДАЧА 3
+// 3.1 Є МАСИВ, ПОТРІБНО СТВОРИТИ РОЗМІТКУ ІЗ ТИХ КАРТОК (ВИКОРИСТАЙТЕ ШАБЛОННИЙ РЯДОК)
+// 3.2 ДОБАВТЕ КНОПКУ, ЧЕРЕЗ ЯКУ МИ КУПЛЯТИМЕМО ТОВАР
+<ul class="js-list"></ul>;
+
+const instruments = [
+  {
+    id: 1,
+    img: "https://content.rozetka.com.ua/goods/images/big/13664457.jpg",
+    name: "Молоток",
+    price: 150,
+  },
+  {
+    id: 2,
+    img: "https://machtz.com.ua/files/resized/products/dsc_2898_new.800x550.jpg",
+    name: "Перфоратор",
+    price: 3000,
+  },
+  {
+    id: 3,
+    img: "https://content2.rozetka.com.ua/goods/images/big_tile/232653359.jpg",
+    name: "Рівень",
+    price: 2000,
+  },
+];
+
+// ЗАДАЧА 4
+// ПОТРІБНО СТВОРИТИ Ф-ЦІЮ , ЯКА БУДЕ ШУКАТИ НАРЦИСА.ГОЛОВНА УМОВА НАРЦИСА ЗНАЮТЬ УСІ , НАРЦИС НЕ ЗНАЄ НІКОГО
+// є елемент масиву , який незнає нікого
+// якщо не одна така людина , то вертаємо not found
+// якщо один , то перевірити , чи його знають усі люди, якщо так то вертаємо found
+
+const people1 = [
+  {
+    name: "Alex",
+    know: ["Eva", "Jhon"],
+  },
+  {
+    name: "Ivan",
+    know: ["Jhon", "Alex"],
+  },
+  {
+    name: "Eva",
+    know: ["Alex", "Jhon"],
+  },
+  {
+    name: "Jhon",
+    know: [],
+  },
+];
+
+const people2 = [
+  {
+    name: "Alex",
+    know: ["Eva", "Jhon"],
+  },
+  {
+    name: "Jhon",
+    know: ["Eva"],
+  },
+  {
+    name: "Eva",
+    know: [],
+  },
+  {
+    name: "Ivan",
+    know: ["Jhon", "Alex"],
+  },
+];
+
+const people3 = [
+  {
+    name: "Alex",
+    know: ["Eva", "Jhon"],
+  },
+  {
+    name: "Jhon",
+    know: [],
+  },
+  {
+    name: "Eva",
+    know: ["Alex", "Jhon"],
+  },
+  {
+    name: "Ivan",
+    know: ["Jhon", "Alex"],
+  },
+];

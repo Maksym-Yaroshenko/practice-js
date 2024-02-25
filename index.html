@@ -4,15 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Document</title>
 </head>
 
 <body>
-<ul class="js-goods"></ul>
+
+    <div class="container">
+        <h2 class="title">Скільки коштує мясо на шашлик :) ?</h2>
+        <form class="form">
+            <label for="price">Ціна грн</label>
+            <input type="text" id="price" name="price" value="50">
+            <label for="quantity">Кількість<span class="amount">1</span>кг </label>
+            <input type="range" id="quantity" name="quantity" value="1" min="1" , max="20">
+            <button class="btn" type="submit">Calculate</button>
+        </form>
+        <p class="text-right total"></p>
+    </div>
+    <!-- <ul class="js-goods"></ul> -->
     <!-- <script src="./js/lessons-1.js" defer></script> -->
     <!-- <script src="./js/lessons-2.js" defer></script> -->
     <!-- <script src="./js/lessons-3.js" defer></script> -->
-    <script src="./js/lessons-4.js" type = "module"></script>
+    <script src="./js/lessons-4.js" type="module"></script>
 </body>
 
 </html>
